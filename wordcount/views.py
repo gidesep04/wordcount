@@ -25,6 +25,10 @@ def count(request):
 
     return render(request,'count.html',{'fulltext':fulltext,'count':len(wordlist),'sortedWords':sortedWords})
 
+def about(request):
+    aboutWebsite='This website deals with counting the words within the paragraph(s)'
+    return render(request,'about.html',{'about':aboutWebsite})
+
 
 def kids(request):
     return HttpResponse('<h1>Kids make home sweet</h1>')
